@@ -7,7 +7,7 @@ class WikiMacro < ActiveRecord::Base
 
     validates_presence_of :name, :description, :content
     validates_length_of :name, :in => 1..NAME_MAX_LENGTH
-    validates_format_of :name, :with => %r{^[a-z0-9_]+$}
+    validates_format_of :name, :with => %r{\A[a-z0-9_]+\z}
 
     validate :validate_name
 
