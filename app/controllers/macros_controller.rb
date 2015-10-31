@@ -6,7 +6,7 @@ class MacrosController < ApplicationController
     before_filter :find_macro, :only => [ :edit, :update, :destroy ]
 
     def index
-        @macros = WikiMacro.all(:order => :name)
+        @macros = WikiMacro.order(:name)
     end
 
     def new
@@ -28,9 +28,9 @@ class MacrosController < ApplicationController
     end
 
     def update
-        if request.put?
+        if params[:wiki_macro]
             old_name = @macro.name
-            @macro.attributes = params[:wiki_macro]
+            @macro.update_attributes(params[:wiki_macro].permit(:name,:description,:content))
             name_changed = @macro.name_changed?
             desc_changed = @macro.description_changed?
             if @macro.save
