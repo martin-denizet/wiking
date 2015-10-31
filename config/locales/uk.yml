@@ -1,0 +1,17 @@
+ru:
+  permission_view_hidden_content: Перегляд схованого тексту
+
+  glyph_left_quote: «
+  glyph_right_quote: »
+
+  label_custom_wiki_macro_plural: Користувацькі макроси Wiki
+  label_custom_wiki_macro_new: Новий макрос
+
+  label_mentions: Згадки
+  label_user_mentions: Згадки %{value}
+  label_view_all_mentions: Переглянути усі згадки
+  label_total_number_of_mentions: Усього згадок
+
+  mail_subject_you_mentioned: Вас згадали
+  mail_body_you_mentioned: Вас згадали в %{title}.
+  mail_body_check_mention: Щоб переглянути згадку перейдіть за посиланням

@@ -1,0 +1,35 @@
+<div class="contextual">
+  <%= link_to(l(:label_custom_wiki_macro_new), { :controller => 'macros', :action => 'new' }, :class => 'icon icon-add') %>
+</div>
+
+<h2><%=l(:label_custom_wiki_macro_plural)%></h2>
+
+<table class="list">
+  <thead>
+    <tr>
+      <th><%= l(:field_name) %></th>
+      <th><%= l(:field_description) %></th>
+      <th></th>
+    </tr>
+  </thead>
+  <% if @macros.any? %>
+  <tbody>
+    <% @macros.each do |macro| %>
+    <tr class="<%= cycle('odd', 'even') %>">
+      <td><code>{{<%= macro.name %>}}</code></td>
+      <td><div class="wiki"><%= textilizable(macro.description) %></div></td>
+      <td class="buttons">
+        <%= link_to(l(:button_edit), { :controller => 'macros', :action => 'edit', :id => macro },
+                                       :class => 'icon icon-edit') %>
+        <%= link_to(l(:button_delete), { :controller => 'macros', :action => 'destroy', :id => macro },
+                                         :method => :delete,
+                                         :confirm => l(:text_are_you_sure),
+                                         :class => 'icon icon-del') %>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+  <% end %>
+</table>
+
+<% html_title(l(:label_custom_wiki_macro_plural)) %>

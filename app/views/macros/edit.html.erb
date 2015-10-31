@@ -1,0 +1,10 @@
+<h2><%= link_to(l(:label_custom_wiki_macro_plural), { :controller => 'macros', :action => 'index' }) %> &#187; <%= h(@macro) %></h2>
+
+<p class="warning"><%= l(:notice_custom_macro_edit) %></p>
+
+<% form = form_for(@macro, :url => { :controller => 'macros', :action => 'update' }, :builder => (TabularFormBuilder rescue Redmine::Views::LabelledFormBuilder)) do |f| %>
+  <%= render(:partial => 'form', :locals => { :f => f }) %>
+  <%= submit_tag(l(:button_save)) %>
+<% end %>
+
+<%= form if Rails::VERSION::MAJOR >= 3 %>

@@ -1,0 +1,269 @@
+.jstElements .help {
+    padding: 8px 0 2px 20px;
+    background: url(../../../images/help.png) no-repeat 0 75%;
+}
+.jstElements .help a.help-link {
+    padding: 2px 0;
+    background: none;
+}
+.jstb_more {
+    background-image: url(../images/jstoolbar/bt_more.png);
+}
+span.wiking-hidden {
+    opacity: 0.25;
+    filter: alpha(opacity=25);
+}
+div.wiking.flash {
+    border-width: 1px;
+    background-position: 6px 3px;
+    width: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    font-size: 10pt;
+}
+div.wiking.warning {
+    background-image: url(../images/warning.png);
+    color: #863D09;
+}
+div.wiking.notice {
+    background-image: url(../images/notice.png);
+    background-color: #c5e7f8;
+    border-color: #759fcf;
+    color: #00365f;
+}
+div.wiking.tip {
+    background-image: url(../images/tip.png);
+    background-repeat: no-repeat;
+    background-color: #eee;
+    border-color: #bbb;
+}
+span.wiking.marker {
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+span.wiking.marker-left,
+span.wiking.marker-right {
+    margin-bottom: 0.5em;
+}
+span.wiking.marker-left {
+    margin-right: 0.5em;
+    float: left;
+}
+span.wiking.marker-right {
+    margin-left: 0.5em;
+    float: right;
+}
+span.wiking.marker-super {
+    margin-bottom: 0.25em;
+}
+span.wiking.marker-todo {
+    background-image: url(../images/todo.png);
+    width: 72px;
+    height: 20px;
+}
+span.wiking.marker-fixme {
+    background-image: url(../images/fixme.png);
+    width: 77px;
+    height: 20px;
+}
+span.wiking.marker-update {
+    background-image: url(../images/update.png);
+    width: 87px;
+    height: 20px;
+}
+span.wiking.marker-new {
+    background-image: url(../images/new-text.png);
+    width: 23px;
+    height: 11px;
+}
+span.marker-new.marker-left,
+span.marker-new.marker-right {
+    background-image: url(../images/new.png);
+    width: 48px;
+    height: 48px;
+}
+span.marker-new.marker-super {
+    background-image: url(../images/new-super.png);
+    width: 28px;
+    height: 9px;
+}
+span.wiking.marker-free {
+    background-image: url(../images/free-text.png);
+    width: 24px;
+    height: 24px;
+}
+span.marker-free.marker-left,
+span.marker-free.marker-right {
+    background-image: url(../images/free.png);
+    width: 48px;
+    height: 48px;
+}
+span.marker-free.marker-super {
+    background-image: url(../images/free-super.png);
+    width: 16px;
+    height: 16px;
+}
+span.wiking.marker-experimental {
+    background-image: url(../images/experimental-text.png);
+    width: 55px;
+    height: 14px;
+}
+span.marker-experimental.marker-left,
+span.marker-experimental.marker-right {
+    background-image: url(../images/experimental.png);
+    width: 110px;
+    height: 28px;
+}
+span.wiking.marker-beta {
+    background-image: url(../images/beta.png);
+    width: 32px;
+    height: 32px;
+}
+span.wiking.smiley {
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+}
+span.wiking.smiley-smiley {
+    background-image: url(../images/smileys/smiley.png);
+}
+span.wiking.smiley-smiley2 {
+    background-image: url(../images/smileys/smiley2.png);
+}
+span.wiking.smiley-laughing {
+    background-image: url(../images/smileys/smiley-grin.png);
+}
+span.wiking.smiley-laughing2 {
+    background-image: url(../images/smileys/smiley-laughing2.png);
+}
+span.wiking.smiley-crying {
+    background-image: url(../images/smileys/smiley-cry.png);
+}
+span.wiking.smiley-sad {
+    background-image: url(../images/smileys/smiley-sad.png);
+}
+span.wiking.smiley-wink {
+    background-image: url(../images/smileys/smiley-wink.png);
+}
+span.wiking.smiley-cheeky {
+    background-image: url(../images/smileys/smiley-razz.png);
+}
+span.wiking.smiley-shock {
+    background-image: url(../images/smileys/smiley-eek.png);
+}
+span.wiking.smiley-annoyed {
+    background-image: url(../images/smileys/smiley-annoyed.png);
+}
+span.wiking.smiley-confuse {
+    background-image: url(../images/smileys/smiley-confuse.png);
+}
+span.wiking.smiley-straight {
+    background-image: url(../images/smileys/smiley-neutral.png);
+}
+span.wiking.smiley-embarrassed {
+    background-image: url(../images/smileys/smiley-red.png);
+}
+span.wiking.smiley-kiss {
+    background-image: url(../images/smileys/smiley-kiss.png);
+}
+span.wiking.smiley-angel {
+    background-image: url(../images/smileys/smiley-angel.png);
+}
+span.wiking.smiley-evil {
+    background-image: url(../images/smileys/smiley-evil.png);
+}
+span.wiking.smiley-rock {
+    background-image: url(../images/smileys/smiley-cool.png);
+}
+span.wiking.smiley-rose {
+    background-image: url(../images/smileys/rose.png);
+    width: 24px;
+    height: 24px;
+}
+span.wiking.smiley-exclamation {
+    background-image: url(../images/smileys/exclamation-red-frame.png);
+}
+span.wiking.smiley-question {
+    background-image: url(../images/smileys/question-frame.png);
+}
+span.wiking.smiley-success {
+    background-image: url(../images/smileys/success-frame.png);
+}
+span.wiking.smiley-failure {
+    background-image: url(../images/smileys/failure-frame.png);
+}
+.wiking.external, div.wiki .wiking.external {
+    background-repeat: no-repeat;
+    background-position: 0% 60%;
+    padding-left: 12px;
+}
+.external.wiking-google, div.wiki .external.wiking-google {
+    background-image: url(../images/link-google.png);
+    background-position: 0% 50%;
+    padding-left: 13px;
+}
+.external.wiking-wikipedia, div.wiki .external.wiking-wikipedia {
+    background-image: url(../images/link-wikipedia.png);
+}
+.external.wiking-redmine, div.wiki .external.wiking-redmine {
+    background-image: url(../images/link-redmine.png);
+    background-position: 0% 40%;
+    padding-left: 13px;
+}
+.external.wiking-chiliproject, div.wiki .external.wiking-chiliproject {
+    background-image: url(../images/link-chiliproject.png);
+    padding-left: 11px;
+}
+img.wiking.shadow {
+    -moz-box-shadow: 1px 1px 3px 1px #b4b4b4;
+    box-shadow: 1px 1px 3px 1px #b4b4b4;
+    margin: 2px 4px 4px 2px;
+    background-color: #fff;
+}
+img.wiking.mac-shadow {
+    -moz-box-shadow: 0px 10px 30px 5px #b4b4b4;
+    box-shadow: 0px 10px 30px 5px #b4b4b4;
+    margin: 20px 30px 30px 20px;
+    background-color: #fff;
+}
+pre.wiking.pressed {
+    -moz-box-shadow: inset 1px 1px 1px #ddd;
+    box-shadow: inset 1px 1px 1px #ddd;
+    -moz-text-shadow: 1px 1px 0px #ddd;
+    text-shadow: 1px 1px 0px #ddd;
+    padding: 2px;
+}
+a.wiking.button {
+    border-width: 1px;
+    border-style: solid;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    background-color: #507aaa;
+    border-color: #809fc3 #2C4056 #2C4056 #809fc3;
+    -moz-text-shadow: 1px 1px 1px #2C4056;
+    text-shadow: 1px 1px 1px #2C4056;
+    padding: 0.5em 1.25em;
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+}
+a:active.wiking.button {
+    border-color: #2C4056 #809fc3 #809fc3 #2C4056;
+}
+.wiking.small {
+    font-size: 0.75em;
+}
+dt.news-comments {
+    background-image: url(../images/news-comments.png);
+}
+.tab-content .contextual {
+    margin-top: auto;
+}
+#admin-menu a.custom-macros {
+    background-image: url(../images/macro.png);
+}
+.new_wiki_macro ul.argument-syntax, .edit_wiki_macro ul.argument-syntax {
+    padding-left: 210px;
+    margin: 0;
+}

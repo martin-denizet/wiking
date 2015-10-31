@@ -1,0 +1,36 @@
+<div class="contextual">
+  <%= link_to(l(:label_view_all_mentions), :controller => 'mentions',
+                                           :action => 'index',
+                                           :id => @user) %>
+</div>
+
+<p>
+  <%= l(:label_total_number_of_mentions)%>: <%= Mention.count(:conditions => { :mentioned_id => @user.id }) %>
+</p>
+
+<div id="activity">
+  <% @mentions_by_day.keys.sort.reverse.each do |day| %>
+    <h4><%= format_activity_day(day) %></h4>
+    <dl>
+      <% @mentions_by_day[day].sort{ |a, b| b.created_on <=> a.created_on }.each do |mention| %>
+        <dt class="<%= mention.class_name %>">
+          <span class="time"><%= format_time(mention.created_on, false) %></span>
+          <%= content_tag('span', h(mention.project), :class => 'project') if mention.project %>
+          <% if mention.url %>
+            <%= link_to(format_activity_title(mention.title), mention.url) %>
+          <% else %>
+            <%= format_activity_title(mention.title) %>
+          <% end %>
+        </dt>
+        <dd>
+          <% if mention.description %>
+            <span class="description"><%= format_activity_description(mention.description) %></span>
+          <% end %>
+          <% if mention.author %>
+            <span class="author"><%= link_to_user(mention.author) %></span>
+          <% end %>
+        </dd>
+      <% end %>
+    </dl>
+  <% end %>
+</div>

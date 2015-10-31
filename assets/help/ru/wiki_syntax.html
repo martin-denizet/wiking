@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <title>Форматирование WikiNG</title>
+    <style type="text/css">
+      body { font-family: Verdana, sans-serif; font-size: 12px; color: #444; }
+      h1 { font-family: Verdana, sans-serif; font-size: 14px; text-align: center; color: #444; }
+      table th { padding-top: 1em; }
+      table td { vertical-align: top; background-color: #f5f5f5; height: 2em; vertical-align: middle; }
+      table td code { font-size: 1.2em; }
+      table td h1 { font-size: 1.8em; text-align: left; }
+      table td h2 { font-size: 1.4em; text-align: left; }
+      table td h3 { font-size: 1.2em; text-align: left; }
+      div.wiking { border-width: 1px; background-position: 6px 3px; background-repeat: no-repeat; padding: 4px 4px 4px 30px; }
+      div.wiking.warning { background-image: url(../../images/warning.png); background-color: #FFEBC1; color: #863D09; border: 1px solid #FDBF3B; }
+      div.wiking.notice { background-image: url(../../images/notice.png); background-position: 4px 1px; background-color: #c5e7f8; color: #00365f; border: 1px solid #759FCF; }
+      div.wiking.tip { background-image: url(../../images/tip.png); background-color: #EEE; border: 1px solid #BBB; }
+      a.external { background-position: 0% 60%; background-repeat: no-repeat; padding-left: 12px; }
+      a.external.wikipedia { background-image: url(../../images/link-wikipedia.png); }
+      a.external.google { background-image: url(../../images/link-google.png); background-position: 0% 50%; padding-left: 13px; }
+      a.external.redmine { background-image: url(../../images/link-redmine.png); background-position: 0% 40%; padding-left: 13px; }
+      a.external.chiliproject { background-image: url(../../images/link-chiliproject.png); padding-left: 11px; }
+    </style>
+  </head>
+  <body>
+    <h1>Синтаксис WikiNG: Краткая справка</h1>
+    <table style="width: 100%;">
+      <tr><th colspan="2">Параграфы</th></tr>
+      <tr><td width="50%">warning. Сообщение</td><td width="50%"><div class="wiking warning">Сообщение</div></td></tr>
+      <tr><td width="50%">notice. Сообщение</td><td width="50%"><div class="wiking notice">Сообщение</div></td></tr>
+      <tr><td width="50%">tip. Сообщение</td><td width="50%"><div class="wiking tip">Сообщение</div></td></tr>
+      <tr><th colspan="2">Маркеры</th></tr>
+      <tr><td width="50%">{TODO}</td><td width="50%"><img src="../../images/todo.png" width="77" height="20" alt="TODO" /></td></tr>
+      <tr><td width="50%">{UPDATE}</td><td width="50%"><img src="../../images/update.png" width="87" height="20" alt="UPDATE" /></td></tr>
+      <tr><td width="50%">{FIXME}</td><td width="50%"><img src="../../images/fixme.png" width="77" height="20" alt="FIXME" /></td></tr>
+      <tr><td width="50%">{NEW}</td><td width="50%"><img src="../../images/new-text.png" width="23" height="11" alt="NEW" /></td></tr>
+      <tr><td width="50%">{FREE}</td><td width="50%"><img src="../../images/free-text.png" width="24" height="24" alt="FREE" /></td></tr>
+      <tr><th colspan="2">Смайлики</th></tr>
+      <tr>
+        <td width="50%">:) =) :D =D :'( :( ;) :P :O :/ :S :| :X :* O:) >:) B) (!) (?) (v) (x) @}->-</td>
+        <td width="50%">
+          <img src="../../images/smileys/smiley.png" width="16" height="16" alt=":)" />
+          <img src="../../images/smileys/smiley2.png" width="16" height="16" alt="=)" />
+          <img src="../../images/smileys/smiley-grin.png" width="16" height="16" alt=":D" />
+          <img src="../../images/smileys/smiley-laughing2.png" width="16" height="16" alt="=D" />
+          <img src="../../images/smileys/smiley-cry.png" width="16" height="16" alt=":'(" />
+          <img src="../../images/smileys/smiley-sad.png" width="16" height="16" alt=":(" />
+          <img src="../../images/smileys/smiley-wink.png" width="16" height="16" alt=";)" />
+          <img src="../../images/smileys/smiley-razz.png" width="16" height="16" alt=":P" />
+          <img src="../../images/smileys/smiley-eek.png" width="16" height="16" alt=":O" />
+          <img src="../../images/smileys/smiley-annoyed.png" width="16" height="16" alt=":/" />
+          <img src="../../images/smileys/smiley-confuse.png" width="16" height="16" alt=":S" />
+          <img src="../../images/smileys/smiley-neutral.png" width="16" height="16" alt=":|" />
+          <img src="../../images/smileys/smiley-red.png" width="16" height="16" alt=":X" />
+          <img src="../../images/smileys/smiley-kiss.png" width="16" height="16" alt=":*" />
+          <img src="../../images/smileys/smiley-angel.png" width="16" height="16" alt="O:)" />
+          <img src="../../images/smileys/smiley-evil.png" width="16" height="16" alt=">:)" />
+          <img src="../../images/smileys/smiley-cool.png" width="16" height="16" alt="B)" />
+          <img src="../../images/smileys/exclamation-red-frame.png" width="16" height="16" alt="(!)" />
+          <img src="../../images/smileys/question-frame.png" width="16" height="16" alt="(?)" />
+          <img src="../../images/smileys/success-frame.png" width="16" height="16" alt="(v)" />
+          <img src="../../images/smileys/failure-frame.png" width="16" height="16" alt="(x)" />
+          <img src="../../images/smileys/rose.png" width="16" height="16" alt="@}->-" />
+        </td>
+      </tr>
+      <tr><th colspan="2">Специальные символы</th></tr>
+      <tr><td width="50%">-- ---</td><td>&ndash; &mdash;</td></tr>
+      <tr><td width="50%">&lt;- &lt;-&gt; -&gt;</td><td>&larr; &harr; &rarr;</td></tr>
+      <tr><td width="50%">&lt;= &lt;=&gt; =&gt;</td><td>&lArr; &hArr; &rArr;</td></tr>
+      <tr><th colspan="2">Ссылки Redmine</th></tr>
+      <tr><td width="50%">user#81</td><td width="50%"><a href="#">Иван Семенов</a></td></tr>
+      <tr><th colspan="2">Внешние ссылки</th></tr>
+      <tr><td width="50%">[[wikipedia>Ruby]]</td><td><a href="#" class="external wikipedia">Ruby</a></td></tr>
+      <tr><td width="50%">[[google>WikiNG]]</td><td><a href="#" class="external google">WikiNG</a></td></tr>
+      <tr><td width="50%">[[redmine>#4179]]</td><td><a href="#" class="external redmine">#4179</a></td></tr>
+      <tr><td width="50%">[[chiliproject>Plugins]]</td><td><a href="#" class="external chiliproject">Plugins</a></td></tr>
+    </table>
+    <p><a href="http://projects.andriylesyuk.com/projects/wiking/wiki/Syntax" onclick="window.open('http://projects.andriylesyuk.com/projects/wiking/wiki/Syntax', '', ''); return false;">Больше информации</a></p>
+    <div style="border-top: 1px solid #AAA; text-align: center; font-size: 0.9em;">Используется <a href="http://projects.andriylesyuk.com/projects/wiking" onclick="window.open('http://projects.andriylesyuk.com/projects/wiking', '', ''); return false;">WikiNG</a></div>
+  </body>
+</html>

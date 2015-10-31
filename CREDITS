@@ -1,0 +1,11 @@
+Thanks to:
+
+ o Dave Carlton for the idea of adding syntax reference
+ o Oleg Kandaurov for assisting in porting the plugin to Redmine 2 / Rails 3
+ o Ivan Cenov for Bulgarian translation
+ o Ismail Sezen for Turkish translation
+ o Ismail Sezen for the idea of the file: link
+ o Daniel Gloger for patch fixing language in Wikipedia links
+ o Timothy Miller for the "More" icon
+ o Yusuke Kamiyamane for the "Success" and "Failure" icons
+ o Ki Won Kim for Korean translation

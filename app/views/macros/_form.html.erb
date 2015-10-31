@@ -1,0 +1,24 @@
+<%= error_messages_for('macro') %>
+
+<div class="box tabular">
+  <p>
+    <%= f.text_field(:name, :size => 30, :required => true) %>
+    <em class="info"><%= l(:text_length_between, :min => 1, :max => WikiMacro::NAME_MAX_LENGTH) %> <%= l(:text_custom_wiki_macro_name_info) %></em>
+  </p>
+  <p>
+    <%= f.text_area(:description, :cols => 80, :rows => 6, :required => true) %>
+    <em class="info">
+      <%= l(:text_custom_wiki_macro_desc_info) %><br />
+      <%= l(:text_custom_wiki_macro_desc_sample) %>
+    </em>
+  </p>
+  <p>
+    <%= f.text_area(:content, :cols => 80, :rows => 12, :required => true, :accesskey => accesskey(:edit)) %>
+    <em class="info"><%= l(:text_custom_wiki_macro_content_info) %></em>
+  </p>
+  <ul class="argument-syntax">
+    <li><em class="info"><%= l(:text_custom_wiki_macro_named_argument) %></em></li>
+    <li><em class="info"><%= l(:text_custom_wiki_macro_unnamed_argument) %></em></li>
+    <li><em class="info"><%= l(:text_custom_wiki_macro_body) %></em></li>
+  </ul>
+</div>

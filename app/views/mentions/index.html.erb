@@ -1,0 +1,45 @@
+<h2><%= l(:label_user_mentions, link_to_user(@user)).html_safe %></h2>
+
+<div id="activity">
+  <% @mentions_by_day.keys.sort.reverse.each do |day| %>
+    <h3><%= format_activity_day(day) %></h3>
+    <dl>
+      <% @mentions_by_day[day].sort{ |a, b| b.created_on <=> a.created_on }.each do |mention| %>
+        <dt class="<%= mention.class_name %>">
+          <% if mention.author %>
+            <%= avatar(mention.author, :size => 24) %>
+          <% end %>
+          <span class="time"><%= format_time(mention.created_on, false) %></span>
+          <%= content_tag('span', h(mention.project), :class => 'project') if mention.project %>
+          <% if mention.url %>
+            <%= link_to(format_activity_title(mention.title), mention.url) %>
+          <% else %>
+            <%= format_activity_title(mention.title) %>
+          <% end %>
+        </dt>
+        <dd>
+          <% if mention.description %>
+            <span class="description"><%= format_activity_description(mention.description) %></span>
+          <% end %>
+          <% if mention.author %>
+            <span class="author"><%= link_to_user(mention.author) %></span>
+          <% end %>
+        </dd>
+      <% end %>
+    </dl>
+  <% end %>
+</div>
+
+<div style="float: left;">
+  <% prev_params = params.dup %>
+  <% prev_params[:next_offset] = @prev_offset if @prev_offset %>
+  <% @prev_offset ||= 0 %>
+  <%= link_to_content_update("\xc2\xab " + l(:label_previous), prev_params.merge(:offset => @offset), :title => l(:label_previous)) if (@offset - @prev_offset) >= 50 %>
+</div>
+<div style="float: right;">
+  <%= link_to_content_update(l(:label_next) + " \xc2\xbb", params.merge(:offset => @next_offset), :title => l(:label_next)) if @next_offset %>
+</div>
+
+<p>&nbsp;</p>
+
+<% html_title(l(:label_mentions), @user) %>

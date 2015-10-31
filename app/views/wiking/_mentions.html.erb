@@ -1,0 +1,36 @@
+<% count = 0 %>
+<% mentions = [] %>
+<% Mention.find(:all,
+                :conditions => { :mentioned_id => @user.id },
+                :order => "created_on DESC").each do |mention|
+    if mention.title.present? && (!mention.mentioning.respond_to?(:visible?) || mention.mentioning.visible?)
+        mentions << mention
+        count += 1
+        break if count == 10
+    end
+end %>
+<% @mentions_by_day = mentions.group_by do |mention|
+    mention.created_on.to_date
+end %>
+
+<% tabs = [] %>
+<% tabs << { :name => 'activity', :partial => 'users/activity', :label => :label_activity } unless @events_by_day.empty? %>
+<% tabs << { :name => 'mentions', :partial => 'users/mentions', :label => :label_mentions } unless @mentions_by_day.empty? %>
+
+<% if tabs.any? %>
+  <%= render_tabs(tabs) %>
+
+  <script type="text/javascript">
+    //<![CDATA[
+    <% if defined? observe_field %>
+      var rightColumn = $('content').down('.splitcontentright');
+      var activityTabs = $('content').down('.tabs');
+      rightColumn.insert({ top: activityTabs.remove() });
+    <% else %>
+      var rightColumn = $('#content').find('.splitcontentright');
+      var activityTabs = $('#content').find('.tabs');
+      rightColumn.prepend(activityTabs.remove());
+    <% end %>
+    //]]>
+  </script>
+<% end %>

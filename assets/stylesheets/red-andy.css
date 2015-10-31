@@ -1,0 +1,76 @@
+.controller-wiki div.wiking ul {
+    margin: 0.5em;
+}
+.controller-wiki div.wiking li {
+    margin: 0;
+}
+div.wiking.flash {
+    -moz-box-shadow: 1px 2px 2px #b4b4b4;
+    box-shadow: 1px 2px 2px #b4b4b4;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    margin: 1em 0;
+}
+div.wiking.warning {
+    background-position: 6px 4px;
+}
+div.wiking.notice {
+    background-image: url(../images/red-andy/notice.png);
+    background-position: 6px 5px;
+    background-color: #e9facd;
+    border-color: #b8d573;
+    color: #005f00;
+}
+div.wiking.tip {
+    background-image: url(../images/notice.png);
+    background-color: #ddedf2;
+    border-color: #759fcf;
+    color: #00365f;
+}
+div.wiking.tip a,
+div.wiking.tip a:link,
+div.wiking.tip a:visited {
+    color: #b85100;
+}
+div.wiking.tip a:hover,
+div.wiking.tip a:active {
+    color: #c61a1a;
+}
+img.wiking.shadow {
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    padding: 6px;
+}
+img.wiking.mac-shadow {
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    padding: 6px;
+}
+pre.wiking.pressed {
+    -moz-box-shadow: inset 1px 2px 2px #ddd;
+    box-shadow: inset 1px 2px 2px #ddd;
+}
+a.wiking.button {
+    background-color: #536a3f;
+    background-image: url(../../../themes/red-andy/images/menu-background.png);
+    background-repeat: repeat-x;
+    border-color: #afc69c #435335 #435335 #afc69c;
+    -moz-text-shadow: 1px 1px 1px #435335;
+    text-shadow: 1px 1px 1px #435335;
+}
+a:active.wiking.button {
+    border-color: #435335 #afc69c #afc69c #435335;
+}
+div.footnotes {
+    border-top: 1px solid #cf973d;
+    margin-top: 2em;
+    padding-top: 0.25em;
+    margin-bottom: 1em;
+}
+div.footnotes p.footnote > sup {
+    vertical-align: baseline;
+    font-size: inherit;
+}
+div.footnotes p.footnote > sup:after {
+    content: " — ";
+}

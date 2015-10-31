@@ -1,0 +1,29 @@
+# Translation by Ki Won Kim (http://xyz37.blog.me, xyz37@naver.com, http://xyz37.dyndns.org/redmine)
+ko:
+  permission_view_hidden_content: "숨겨진 내용 보기"
+
+  glyph_left_quote: “
+  glyph_right_quote: ”
+
+  label_custom_wiki_macro_plural: "사용자 위키 매크로"
+  label_custom_wiki_macro_new: "새로운 매크로"
+
+  notice_custom_macro_edit: "매크로를 수정하는 것은 이미 사용되었습니다.!"
+
+  text_custom_wiki_macro_name_info: "소문자(a-z), 숫자, _ 만 허용됨."
+  text_custom_wiki_macro_desc_info: "위키 문법이 지원됩니다. 예:"
+  text_custom_wiki_macro_desc_sample: "사용 가능한 모든 매크로 목록을 포함하여 목록을 표시 합니다."
+  text_custom_wiki_macro_content_info: "HTML이 지원됩니다. 인수에 대한 구문:"
+  text_custom_wiki_macro_named_argument: "%{name} - 명명된 인수를 사용하여 지정: name=value."
+  text_custom_wiki_macro_unnamed_argument: "%[1] - 값으로 지정된 이름없는 인수"
+  text_custom_wiki_macro_body: "%(*) - 매크로 텍스트 본문"
+
+  label_mentions: "언급"
+  label_user_mentions: "%{value} 값의 언급"
+  label_view_all_mentions: "모든 언급 보기"
+  label_total_number_of_mentions: "전제 언급 수"
+  label_user_mentioned: "사용자 언급"
+
+  mail_subject_you_mentioned: "당신이 언급한"
+  mail_body_you_mentioned: "당신이 언급된 %{title}."
+  mail_body_check_mention: "언급을 확인하려면 이동"
