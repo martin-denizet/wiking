@@ -18,9 +18,10 @@ class MentionsController < ApplicationController
             @next_offset = 0
         end
         mentions = []
-        Mention.find(:all, options.merge(
-                     :conditions => { :mentioned_id => @user.id },
-                     :order => "created_on DESC")).each do |mention|
+        all_records = params[:offset] ? Mention.where(:mentioned_id => @user.id).order(:created_on => :desc).offset(options[:offset]).limit(options[:limit]) :
+            Mention.where(:mentioned_id => @user.id).order(:created_on => :desc)
+        all_records.each do |mention|
+            end
             if mention.title.present? && (!mention.mentioning.respond_to?(:visible?) || mention.mentioning.visible?)
                 mentions << mention
                 count += 1

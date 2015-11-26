@@ -70,7 +70,7 @@ module WikingApplicationHelperPatch
                     when 'version'
                         if project
                             name = value.gsub(%r{^"(.*)"$}, "\\1")
-                            current = project.versions.find(:all).sort.reverse.select{ |v| v.is_a?(Version) && v.closed? }.first
+                            current = project.versions.all.sort.reverse.select{ |v| v.is_a?(Version) && v.closed? }.first
                             if current
                                 if version = project.versions.find_by_name(name)
                                     result = (current <=> version)
