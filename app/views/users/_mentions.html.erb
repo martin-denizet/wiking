@@ -5,7 +5,7 @@
 </div>
 
 <p>
-  <%= l(:label_total_number_of_mentions)%>: <%= Mention.count(:conditions => { :mentioned_id => @user.id }) %>
+  <%= l(:label_total_number_of_mentions)%>: <%= Mention.where(:mentioned_id => @user.id).count %>
 </p>
 
 <div id="activity">
