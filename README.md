@@ -13,7 +13,7 @@ http://projects.andriylesyuk.com/projects/wiking/wiki
 
 ## Compatibility
 
-Tested on Redmine 3.1.1 with Ruby 2.2.3
+Tested on Redmine 3.2.1 with Ruby 2.2.3
 For Redmine 2.x compatibility, use version 1.0.0b of the plugin
 
 ## Downloading and installing the plugin
@@ -40,6 +40,7 @@ The installation is now finished and you will be able to use the plugin after yo
 * Timothy Miller for the "More" icon
 * Yusuke Kamiyamane for the "Success" and "Failure" icons
 * Ki Won Kim for Korean translation
+* @addow fix issue #3
 
 ## How to contribute
 
