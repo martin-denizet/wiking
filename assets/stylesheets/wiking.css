@@ -8,6 +8,7 @@
 }
 .jstb_more {
     background-image: url(../images/jstoolbar/bt_more.png);
+    background-repeat: no-repeat;
 }
 span.wiking-hidden {
     opacity: 0.25;
@@ -23,10 +24,12 @@ div.wiking.flash {
 }
 div.wiking.warning {
     background-image: url(../images/warning.png);
+    background-repeat: no-repeat;
     color: #863D09;
 }
 div.wiking.notice {
     background-image: url(../images/notice.png);
+    background-repeat: no-repeat;
     background-color: #c5e7f8;
     border-color: #759fcf;
     color: #00365f;
@@ -262,6 +265,7 @@ dt.news-comments {
 }
 #admin-menu a.custom-macros {
     background-image: url(../images/macro.png);
+    background-repeat: no-repeat;
 }
 .new_wiki_macro ul.argument-syntax, .edit_wiki_macro ul.argument-syntax {
     padding-left: 210px;
