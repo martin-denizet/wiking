@@ -7,8 +7,13 @@ module WikingMacrosDefinitionsPatch
         base.class_eval do
             unloadable
 
-            alias_method_chain :macro_exists?, :custom if method_defined?(:macro_exists?)
-            alias_method_chain :exec_macro,    :custom
+            if method_defined?(:macro_exists?)
+                alias_method :macro_exists_without_custom?,   :macro_exists?
+                alias_method :macro_exists?,   :macro_exists_with_custom?
+            end
+
+            alias_method :exec_macro_without_custom,   :exec_macro
+            alias_method :exec_macro,   :exec_macro_with_custom
         end
     end
 

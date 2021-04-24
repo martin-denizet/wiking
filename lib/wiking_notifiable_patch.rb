@@ -6,7 +6,7 @@ module WikingNotifiablePatch
             unloadable
 
             class << self
-                alias_method_chain :all, :wiking
+                alias_method :all_with_wiking, :all
             end
         end
     end

@@ -3,3 +3,26 @@ tr:
 
   glyph_left_quote: “
   glyph_right_quote: ”
+
+  label_custom_wiki_macro_plural: Kullanıcı tanımlı wiki makroları
+  label_custom_wiki_macro_new: Yeni makro
+
+  notice_custom_macro_edit: Düzenleme hatırlatması, bu makro halihazırda kullanılıyor olabilir!
+
+  text_custom_wiki_macro_name_info: Sadece küçük harfler (a-z), rakamlar ve altçizgi kabul edilir.
+  text_custom_wiki_macro_desc_info: 'Wiki Söz dizini desteklenir. Örnek:'
+  text_custom_wiki_macro_desc_sample: Eğer varsa açıklamaları ile birlikte tüm makroların bir listesini görüntüler
+  text_custom_wiki_macro_content_info: 'HTML desteklenir. Argümanlar için söz dizimi:'
+  text_custom_wiki_macro_named_argument: '%{name} - isimlendirilmiş argüman kullanımı: isim=değer.'
+  text_custom_wiki_macro_unnamed_argument: '%[1] - isimlendirilmemiş argümanlar değerleri ile kullanılır.'
+  text_custom_wiki_macro_body: '%(*) - makronun gövde metni.'
+
+  label_mentions: Anmalar
+  label_user_mentions: Mentions of %{value}
+  label_view_all_mentions: Tüm anmaları gör
+  label_total_number_of_mentions: Anma sayısı
+  label_user_mentioned: Kullanıcı anıldı
+
+  mail_subject_you_mentioned: Portalda anıldınız
+  mail_body_you_mentioned: "%{title} başlığı altında anıldınız."
+  mail_body_check_mention: Anıldığınız yeri kontrol edin ...

@@ -2,8 +2,8 @@ class MacrosController < ApplicationController
   layout 'admin'
   menu_item :custom_macros
 
-  before_filter :require_admin
-  before_filter :find_macro, :only => [:edit, :update, :destroy]
+  before_action :require_admin
+  before_action :find_macro, :only => [:edit, :update, :destroy]
 
   def index
     @macros = WikiMacro.order(:name)
@@ -14,7 +14,7 @@ class MacrosController < ApplicationController
   end
 
   def create
-    @macro = WikiMacro.new(params[:wiki_macro])
+    @macro = WikiMacro.new(macro_params)
     if request.post? && @macro.save
       flash[:notice] = l(:notice_successful_create)
       @macro.register!
@@ -30,7 +30,7 @@ class MacrosController < ApplicationController
   def update
     if params[:wiki_macro]
       old_name = @macro.name
-      @macro.update_attributes(params[:wiki_macro].permit(:name, :description, :content))
+      @macro.update_attributes(macro_params)
       name_changed = @macro.name_changed?
       desc_changed = @macro.description_changed?
       if @macro.save
@@ -64,6 +64,12 @@ class MacrosController < ApplicationController
     @macro = WikiMacro.find(params[:id])
   rescue ActiveRecord::RecordNotFound
     render_404
+  end
+
+  private
+
+  def macro_params
+    params.require(:wiki_macro).permit(:name, :description, :content)
   end
 
 end
