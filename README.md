@@ -13,8 +13,8 @@ http://projects.andriylesyuk.com/projects/wiking/wiki
 
 ## Compatibility
 
-Tested on Redmine 3.2.1 with Ruby 2.2.3
-For Redmine 2.x compatibility, use version 1.0.0b of the plugin
+Tested on Redmine 4.1.2.
+Should be compatible with 4.x and 3.x
 
 ## Downloading and installing the plugin
 
@@ -41,6 +41,8 @@ The installation is now finished and you will be able to use the plugin after yo
 * Yusuke Kamiyamane for the "Success" and "Failure" icons
 * Ki Won Kim for Korean translation
 * @addow fix issue #3
+* @das-peter fixing repeat of icons
+* @atopcu Turkish translations
 
 ## How to contribute
 
