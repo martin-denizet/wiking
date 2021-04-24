@@ -12,9 +12,11 @@ module WikingPDFPatch
             unloadable
 
             if method_defined?(:formatted_text)
-                alias_method_chain :formatted_text, :wiking
+                alias_method :formatted_text_without_wiking, :formatted_text
+                alias_method :formatted_text, :formatted_text_with_wiking
             else
-                alias_method_chain :fix_text_encoding, :wiking
+                alias_method :fix_text_encoding_without_wiking, :fix_text_encoding
+                alias_method :formatted_text, :fix_text_encoding_with_wiking
             end
         end
     end

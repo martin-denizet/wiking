@@ -6,7 +6,7 @@ class WikiMacro < ActiveRecord::Base
   NAME_MAX_LENGTH = 30
 
 
-  attr_accessible :name, :description, :content
+  # attr_accessible :name, :description, :content
 
   validates_presence_of :name, :description, :content
   validates_length_of :name, :in => 1..NAME_MAX_LENGTH

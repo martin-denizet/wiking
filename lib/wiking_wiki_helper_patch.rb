@@ -16,7 +16,7 @@ module WikingWikiHelperPatch
 
     module InstanceMethods
 
-        def wikitoolbar_with_wiking_for(field_id)
+        def wikitoolbar_with_wiking_for(field_id, preview_url = preview_text_path)
             unless @heads_for_wiki_formatter_included
                 content_for :header_tags do
                     wiki_heads = ''

@@ -10,12 +10,22 @@ module WikingApplicationHelperPatch
         base.class_eval do
             unloadable
 
-            alias_method_chain :textilizable,        :wiking
-            alias_method_chain :parse_headings,      :wiking unless Redmine::VERSION::MAJOR == 1 && Redmine::VERSION::MINOR == 0
-            alias_method_chain :parse_wiki_links,    :wiking
-            alias_method_chain :parse_redmine_links, :wiking
+            alias_method :textilizable_without_wiking,        :textilizable
+            alias_method :textilizable,        :textilizable_with_wiking
 
-            alias_method_chain :link_to_user, :login
+            unless Redmine::VERSION::MAJOR == 1 && Redmine::VERSION::MINOR == 0
+                alias_method :parse_headings_without_wiking,      :parse_headings
+                alias_method :parse_headings,      :parse_headings_with_wiking
+            end
+
+            alias_method :parse_wiki_links_without_wiking,    :parse_wiki_links
+            alias_method :parse_wiki_links,    :parse_wiki_links_with_wiking
+
+            alias_method :parse_redmine_links_without_wiking, :parse_redmine_links
+            alias_method :parse_redmine_links, :parse_redmine_links_with_wiking
+
+            alias_method :link_to_user_without_login, :link_to_user
+            alias_method :link_to_user, :link_to_user_with_login
 
             define_method :parse_wiking_conditions, instance_method(:parse_wiking_conditions)
             define_method :parse_glyphs,            instance_method(:parse_glyphs)
